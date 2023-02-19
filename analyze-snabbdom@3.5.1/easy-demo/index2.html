@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.clickHandle = function () {
+            const container = document.getElementById('container')
+            container.style.height = '10px';
+            console.log('yus', container.offsetLeft)
+
+            container.style.height = '100px';
+            container.style.height = '200px';
+            container.style.height = '300px';
+        }
+    </script>
+</head>
+<body>
+<div id='container' style="height: 100px;background-color: red"></div>
+<button onclick="clickHandle()">click</button>
+</body>
+
+
+</html>
