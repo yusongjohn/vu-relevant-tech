@@ -17,7 +17,7 @@
     "webpack-cli": "4.10.0"
   },
   "scripts": {
-    "build": "webpack -c ./webpack.config.js"
+    "build": "webpack -c analyze-vue-loader-15.8.3/webpack.config.js"
   },
   "repository": {
     "type": "git",
