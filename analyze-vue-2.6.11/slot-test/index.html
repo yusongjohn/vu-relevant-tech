@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="/node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+  <div id="app" class="container">
+    <div>-------------------------slot begin--------------</div>
+    <slot-test>
+      <template v-slot:header="slotProps">
+        <div>name: {{ slotProps.user.name }}</div>
+        <div>sex: {{ slotProps.user.sex }}</div>
+        <h1>Here might be a page title</h1>
+      </template>
+
+      <p>A paragraph for the main content.</p>
+      <p>And another one.</p>
+
+      <template v-slot:footer>
+        <p>Here's some contact info</p>
+      </template>
+
+    </slot-test>
+    <div>-------------------------slot end--------------</div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -4,6 +4,7 @@
   "description": "分析vue-loader@15.8.3源码",
   "main": "index",
   "dependencies": {
+    "babel-plugin-import": "^1.13.6",
     "vue": "2.6.11"
   },
   "devDependencies": {

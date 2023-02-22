@@ -3,18 +3,33 @@
 <head>
     <title>Vue.js github commits example</title>
     <script src="/node_modules/vue/dist/vue.js"></script>
-
+    <style>
+        .active {
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
 <div id="app" class="container">
-    <div @click="clickHandler">
-        before
-        <span v-if="showSpan">span tag</span>
-        <div v-for="item in items">
-            <span> {{ item }}</span>
-        </div>
+    <slot-test>
+        <template v-slot:header="slotProps">
+            <div>name: {{ slotProps.user.name }}</div>
+            <div>sex: {{ slotProps.user.sex }}</div>
+        </template>
+    </slot-test>
+
+    <div>static node</div>
+
+    <span v-if="showSpan" @click="clickHandler" :class="{ active:  showSpan }"> show Span</span>
+    <span v-else @click="clickHandler">hide Span</span>
+
+    <div v-for="(item, index) in items">
+        <span> {{ item }}</span>
     </div>
+
+    <input v-model="searchText" />
 </div>
 <script src="app.js"></script>
+
 </body>
 </html>
